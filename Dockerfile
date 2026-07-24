@@ -24,7 +24,7 @@ COPY Pipfile.lock .
 COPY setup.cfg .
 COPY setup.py .
 COPY pyproject.toml .
-RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
+RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --skip-lock
 
 FROM base AS runtime
 
